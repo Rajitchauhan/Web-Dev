@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Event Listener</title>
+</head>
+<body>
+    <center><h1>How to Add Event Listener</h1></center>
+
+    <br><br>
+
+    <button id="btn" >Click Me</button>
+
+    <script>
+
+        let btn = document.querySelector('#btn');
+
+        let msg = () => console.log(' i have been clicked'); 
+        btn.addEventListener('click' , msg);
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Function in js</h1>
+    <script>
+        let sum = function(n , m){
+            return n + m;
+        };
+        console.log(sum(2 , 3));
+        console.log('pass anonymous function as a param');
+
+        let threeSum = function(n1 , n2 , n3 , sumFun){
+            let s = sumFun(n1 , n2 );
+            return sumFun(s , n3);
+        }
+
+        console.log(threeSum(1 , 2 , 3 , sum));
+
+    </script>
+</body>
+</html>
