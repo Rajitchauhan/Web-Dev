@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title> Flex Box </title>
+    <style>
+        .nav-list{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            gap : 3rem;
+            
+        }
+        .nav-list li{
+            flex-shrink: 1;
+            flex-grow: 1;
+            width: max-content;
+        }
+        header{
+            --border-width : 5px;
+        }
+        .nav-list {
+            border: var(--border-width) solid red;
+        }
+    </style>
+</head>
+<body>
+    
+    <center><h1>Learn Flex box</h1></center>
+ 
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Servering the inforamtion</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Content</a></li>
+            </ul>
+        </nav>
+    </header>
+
+</body>
+</html>

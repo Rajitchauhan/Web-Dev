@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .card{
+            background-color: aqua;
+        }
+        .column{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            border : 10px solid firebrick;
+            /* width: 800px; */
+        }
+        /* access all children of colmn */
+        .column > * {
+            /* flex : 1; */
+            /* flex-grow: 1;  */
+            /*   flex-grow: 0; row very thin  */
+            /* flex-wrap: wrap; */
+            /* flex-shrink: 1; */
+            flex-basis: 100%;
+        }
+        @media (min-width : 700px) {
+            .column{
+                flex-direction : row;
+            }
+        }
+    </style>
+    <title> Flex-card </title>
+</head>
+<body>
+    <center><h1>Flex card</h1></center>
+    <section class="cards">
+        <h2>some card</h2>
+        <div class="column">
+            <article class="card" >
+                <h3>Fuun struff</h3>
+                <p>Oracle’s commitment to embracing emerging technologies aligns with my passion for staying at the forefront of advancements.
+                    The introduction of Oracle Autonomous Database reflects the company’s dedication to innovation and efficiency</p>
+            </article>
+            <article class="card" >
+                <h3>My struff</h3>
+                <p>Oracle’s commitment to embracing emerging technologies aligns with my passion for staying at the forefront of advancements.
+                    The introduction of Oracle Autonomous Database reflects the company’s dedication to innovation and efficiency</p>
+            </article>
+            <article class="card">
+                <h3>Second Fun</h3>
+                <p>Oracle’s commitment to embracing emerging technologies aligns with my passion for staying at the forefront of advancements.
+                    The introduction of Oracle Autonomous Database reflects the company’s dedication to innovation and efficiency. I am eager to
+                    contribute to Oracle’s legacy of delivering groundbreaking solutions to top companies globally</p>
+            </article>
+        </div>
+
+    </section>
+</body>
+</html>
