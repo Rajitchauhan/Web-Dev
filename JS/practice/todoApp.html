@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Apps</title>
+</head>
+<body>
+    <center><h1>This is Todo app </h1></center>
+    <form action="" method="post">
+        <span>Name</span> <input type="text" id="name">
+        <br>
+        <span>Age</span> <input type="text" id="age">
+        <br>
+        <input onclick="getData();" type="button" value="Add Details">
+       
+        <div id = "show-todo"
+        class="table-responsive"
+    >
+    <table 
+    class="table table-primary"
+>
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
+            
+        </tr>
+    </thead>
+    <tbody  id = "t-body" >
+        
+        
+    </tbody>
+</table>
+        
+
+    </div>
+ 
+        
+    </form>
+
+
+    <script src="todo.js"></script>
+
+</body>
+</html>

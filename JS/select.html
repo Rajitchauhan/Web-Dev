@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>select box</title>
+    <style>
+        #select , #subSelect , #duration{
+            text-align: center;
+            font-size: 30px;
+            margin-left: 20%;
+            padding : 10px 20px 10px 20px;
+        }
+        #userInput{
+            font-size: 20px;
+            padding : 10px 20px 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <center><h1>Play with select option using js</h1></center>
+
+    <select name="" id="select" onchange="showOption();">
+        <option value="1">Select Options</option>
+        <option value="SName">Student Name</option>
+        <option value="Duration">Duration</option>
+        <option value="Serial">Serial No</option>
+        <option value="CertificateCompletion">Certificate Completion</option>
+        <option value="Course">Course</option>
+    </select>
+
+    <br><br>
+
+    <select name="" style="display: none;" id="subSelect" onchange="addPrefix();">
+        <option value="1">Select Options</option>
+        <option value="normal">Normal</option>
+        <option value="project">Project</option>
+    </select>
+
+    <select name="" style="display: none;" id="duration" >
+        <option value="1">Select Options</option>
+        <option value="day">Days</option>
+        <option value="month">Months</option>
+    </select>
+
+    <br><br>
+
+    <div id="inputBox" style="display: none; margin-left: 15%;  font-size: 20px;">
+        <label for="userInput" class="form-label">Enter Value:</label>
+        <input type="text" class="form-control" id="userInput" name="userInput" placeholder="Enter Student name">
+    </div>
+
+    <div id="dateRangeOption" style="display: none;">
+        <label for="startDate" class="form-label">Start Date:</label>
+        <input type="date" class="form-control" id="startDate" name="startDate">
+        <label for="endDate" class="form-label">End Date:</label>
+        <input type="date" class="form-control" id="endDate" name="endDate">
+    </div>
+
+
+    <script>
+        function showOption() {
+            let selectOptions = document.querySelector('#select').value;
+        // let selectOptions = document.getElementById('select').value;
+            let inputBox = document.getElementById('inputBox');
+
+            let dateRangeOption = document.getElementById('dateRangeOption');
+
+            let subSelect = document.getElementById('subSelect');
+
+            let duration = document.getElementById('duration');
+
+            inputBox.style.display = 'none';
+            dateRangeOption.style.display = 'none';
+            subSelect.style.display = 'none';
+            duration.style.display = 'none';
+
+            console.log(selectOptions);
+            switch(selectOptions){
+                case 'SName':
+                    console.log('this is options for student data');
+                    inputBox.style.display = 'block';
+                    userInput.value = '';
+                    userInput.placeholder = "Type name here..";
+                    break;
+                case 'Duration':
+                    console.log('this is options 2');
+                    duration.style.display = 'block';
+                    inputBox.style.display = 'block';
+                    userInput.value = '';
+                    userInput.placeholder = "Type Days/Months here..";
+                    break;
+                case 'Serial':
+                    console.log('this is options 3');
+                    subSelect.style.display = 'block';
+                    
+
+                    break;
+                case 'CertificateCompletion':
+                    console.log('this is options 4');
+                    dateRangeOption.style.display = 'block';
+                    break;
+                case 'Course':
+                    console.log('this is options 5');
+                    inputBox.style.display = 'block';
+                    userInput.value = '';
+                    userInput.placeholder = "Type course name here..";
+
+                    break;
+                default : 
+                    console.log('This is default');
+                    break;
+            }
+  
+       }
+
+       function addPrefix(){
+        let subSelect = document.getElementById('subSelect').value;
+
+        inputBox.style.display = 'block'; 
+
+        switch (subSelect) {
+
+            case 'normal':
+                console.log('this is for normal');
+                userInput.value = 'EGA';
+                break;
+            case 'project':
+                console.log('this is for project');
+                userInput.value = 'EGAP';
+                break;
+        
+            default:
+                console.log('this is default');
+                userInput.value = '';
+                break;
+        }
+
+       }
+       
+    </script>
+</body>
+</html>
