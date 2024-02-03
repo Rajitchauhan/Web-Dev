@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pass by val and reference</title>
+</head>
+<body>
+    <center><h3>Pass by value and reference</h3></center>
+    <script>
+        // pass by value
+
+        let val = 10;
+        function increase(num){
+            num++;
+        }
+
+        increase(val);
+        console.log("Value is by pass ",val);
+
+        // pass by reference
+        let val1 = {x : 10};
+
+        function  inc(num){
+            num.x++;
+        }
+        inc(val1);
+
+        console.log(" val is by ref " , val1.x)
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIFY</title>
+</head>
+<body>
+    <h3>
+        IIFE stands for Immediately Invoked Function Expression. <br>
+        It is a common JavaScript pattern where a function is defined and executed immediately <br>
+         after its creation. IIFE is often used to create a private scope for variables to avoid polluting <br>
+           the global scope and to provide encapsulation.
+    </h3>
+
+    <script>
+        (function() {
+        // This code is inside the IIFE and has its own scope
+        let variableInsideIIFE = "I am inside the IIFE!";
+        console.log(variableInsideIIFE);
+        })();
+        // variableInsideIIFE is not accessible outside the IIFE 
+            //and will throw an error if you try to access it here
+
+    </script>
+</body>
+</html>

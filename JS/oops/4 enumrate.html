@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enumrate</title>
+</head>
+<body>
+    <h3>
+        In JavaScript, the for...in loop is often used for enumerating over the properties of an object. However, <br>it's important to note that for...in iterates over all enumerable properties, including inherited ones, and it's not guaranteed to iterate in a specific order. Also,<br> it may not behave as expected when used with arrays.
+    </h3>
+
+<br>
+<br>
+<script>
+    const car = {
+        name : 'Toyta' , 
+        model: 'Camry',
+        year: 2022
+    };
+
+    for (let key in car){
+        console.log(`keys ::  ${key} and values  ${car[key]}`);
+    }
+</script>
+
+<h3>
+    For iterating over elements in an array, it's recommended to use the for...of loop:  
+    </h3>
+
+    <script>
+        const arr = [1 ,2 ,3, 4, 5, 5, 6, 7, 8, 8];
+        for (let n in arr){
+            console.log(`index is ${n} and elements ${arr[n]}`);
+        }
+
+
+    </script>
+
+
+<h3>
+    if you want to enumerate over the indices of an array along with the values,<br> you can still use for...in: 
+    </h3>
+
+    <script>
+        const numbers = [1, 2, 3, 4, 5];
+
+        for (let number of numbers) {
+        console.log(number);
+        }
+
+    </script>
+
+    <h3>
+        It's worth mentioning that starting from ECMAScript 2015 (ES6),<br> you can also use Object.keys(), Object.values(), and Object.entries() for more explicit iteration over the properties of an object <br> or elements of an array. These methods provide arrays that you can iterate using standard loops or the forEach method.
+
+
+
+
+
+
+    </h3>
+
+
+</body>
+</html>

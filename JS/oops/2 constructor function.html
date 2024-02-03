@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>
+        In JavaScript, constructor functions are used to create and initialize objects. 
+        They are a way to define a blueprint for creating objects with a specific structure and behavior
+    
+        . Constructor functions are typically used with the new keyword to create instances of objects.
+    </h3>
+
+    <script>
+        function Circle(r){
+            this.r = r;
+            this.draw = function(){
+                console.log('this is inside function');
+            }
+        }
+        // let  circle = Circle(1); // globally declair
+        let circle = new Circle(1); // 1 - create an empty object , 2 - 'this' point to that object and return the  obj
+        console.log(circle);
+
+        
+        function Person(name, age, isStudent) {
+                this.name = name;
+                this.age = age;
+                this.isStudent = isStudent;
+                
+                this.greet = function() {
+                    console.log("Hello!");
+                };
+                }
+
+                let john = new Person("John", 25, true);
+                let jane = new Person("Jane", 30, false);
+
+                console.log(john.name); // John
+                john.greet(); // Hello!
+                console.log(jane.age); // 30
+
+    </script>
+</body>
+</html>

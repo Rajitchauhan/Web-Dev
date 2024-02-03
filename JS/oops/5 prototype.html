@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototypes</title>
+</head>
+<body>
+    <h3>
+        Each instance of a constructor function has its own set of properties and methods,
+         <br> which can be inefficient. Prototypes allow you to share methods among all instances
+    </h3>
+
+    <script>
+
+        function Person(name, age, isStudent) {
+                this.name = name;
+                this.age = age;
+                this.isStudent = isStudent;
+                }
+
+                Person.prototype.greet = function() {
+                console.log("Hello!");
+                };
+
+                let john = new Person("John", 25, true);
+                let jane = new Person("Jane", 30, false);
+
+                console.log(john.name); // John
+                john.greet(); // Hello!
+                console.log(jane.age); // 30
+
+    </script>
+</body>
+</html>

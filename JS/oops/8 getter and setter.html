@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getter and Setter</title>
+</head>
+<body>
+    <h3>
+        In JavaScript, getters and setters are special methods used for accessing 
+        and modifying the values of an object's properties.  <br>
+        They allow you to control how properties are read and written, <br>
+        providing a level of encapsulation and enabling additional logic during property access <br>
+        and modification.
+    </h3>
+    <br>
+    <br>
+    <h3>
+        Getter:
+        A getter is a method that allows you to retrieve the value of a property. <br>
+        It is defined using the get keyword followed by the property name.
+    </h3>
+
+    <script>
+            let person = {
+            firstName: "John",
+            lastName: "Doe",
+            
+            // Getter for the full name property
+            get fullName() {
+                return `${this.firstName} ${this.lastName}`;
+            }
+            };
+
+            console.log(person.fullName); // Output: John Doe
+
+    </script>
+
+    <br>
+    <br>
+    <h3>
+        Setter:
+        A setter is a method that allows you to modify the value of a property. <br>
+        It is defined using the set keyword followed by the property name.
+    </h3>
+
+    <script>
+            let person = {
+            _age: 25, // Convention: prefix with an underscore to indicate a private property
+            
+            // Setter for the age property
+            set age(newAge) {
+                if (newAge > 0 && newAge < 150) {
+                this._age = newAge;
+                } else {
+                console.log("Invalid age");
+                }
+            },
+            
+            // Getter for the age property
+            get age() {
+                return this._age;
+            }
+            };
+
+            // Use the setter
+            person.age = 30; // Valid
+            person.age = 200; // Invalid, prints "Invalid age"
+
+            // Use the getter
+            console.log(person.age); // Output: 30
+
+    </script>
+</body>
+</html>

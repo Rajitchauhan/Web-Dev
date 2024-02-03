@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>
+
+        In JavaScript, a factory function is a function that returns an object. It is a way to create and initialize objects with a consistent structure, often used to create multiple instances of similar objects. Factory functions are a type of design pattern that promotes object creation and encapsulation.
+    </h3>
+
+    <script>
+
+        function createCircle(radius){
+            return {
+                radius , 
+                draw : function(){
+                    console.log('Draw');
+                },
+            };
+        }
+
+        let circle = createCircle(2);
+        circle.draw();
+
+
+
+        // Factory function to create a person object
+function createPerson(name, age) {
+  // Object to be returned
+  const person = {};
+
+  // Properties
+  person.name = name;
+  person.age = age;
+
+  // Method
+  person.sayHello = function() {
+    console.log(`Hello, my name is ${person.name} and I am ${person.age} years old.`);
+  };
+
+  // Return the created object
+  return person;
+}
+
+// Usage of the factory function
+const person1 = createPerson("John", 25);
+const person2 = createPerson("Alice", 30);
+
+// Call the method on each object
+person1.sayHello(); // Output: Hello, my name is John and I am 25 years old.
+person2.sayHello(); // Output: Hello, my name is Alice and I am 30 years old.
+
+    </script>
+</body>
+</html>

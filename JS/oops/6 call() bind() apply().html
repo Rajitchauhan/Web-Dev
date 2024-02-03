@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call bind and apply</title>
+</head>
+<body>
+    <center>
+        <h3>  Call()  </h3>
+    </center>
+    <h3>1. call()
+        The call() method is used to invoke a function with a
+         specified this value and individual arguments.</h3>
+
+    <script>
+        function greet(name){
+            console.log(` hello !  , ${name} and ${this.lastName}`);
+        }
+
+        let sirName = {
+            lastName : 'Chauhan'
+        };
+
+        // greet('Rajit'); //  hello !  , Rajit and undefined
+
+        greet.call(sirName , 'Rajit');
+
+    </script>
+
+    <h3>
+        2. apply()
+            The apply() method is similar to call(), <br>
+            but it takes an array or an array-like object as its second parameter to pass arguments to the function.
+    </h3>
+
+    <script>
+        // Another example function
+            function add(a, b) {
+            return a + b + this.value;
+            }
+
+            // Object representing additional value
+            let contextObj = {
+            value: 10
+            };
+
+            // Using apply() to invoke add with contextObj as the 'this' value and passing arguments as an array
+            let result = add.apply(contextObj, [5, 7]);
+
+            console.log(result); // Output: 22
+
+    </script>
+
+    <h3>
+        3. bind()
+                The bind() method creates a new function with the same body as the original <br>
+                 function but a fixed this value.
+    </h3>
+
+    <script>
+        // Function to display full name
+                function fullName() {
+                console.log(`${this.firstName} ${this.lastName}`);
+                }
+
+                // Object representing a person's details
+                let personDetails = {
+                firstName: "John",
+                lastName: "Doe"
+                };
+
+                // Using bind() to create a new function with personDetails as the 'this' value
+                let displayFullName = fullName.bind(personDetails);
+
+                // Invoking the new function
+                displayFullName(); // Output: John Doe
+
+    </script>
+
+    <h3>
+        call(): Invokes a function with a specified this value and individual arguments. <br>
+       <br> apply(): Invokes a function with a specified this value and an array or array-like object as arguments.
+       <br> bind(): Creates a new function with a fixed this value.
+    </h3>
+
+</body>
+</html>
