@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Map in js </title>
+</head>
+<body>
+    <h3>
+        In JavaScript, the map() function is a built-in method that allows you to create a new array
+        <br> by applying a given function to each element of an existing array. <br>
+         It transforms the elements of the array without modifying the original array.
+
+
+    </h3>
+    <script>
+        // Example 1: Doubling each element in an array
+            let numbers = [1, 2, 3, 4, 5];
+
+            let doubledNumbers = numbers.map(function(number) {
+            return number * 2;
+            });
+
+            console.log(doubledNumbers); // Output: [2, 4, 6, 8, 10]
+
+
+            // Example 2: Squaring each element using arrow function
+                let numbers1 = [1, 2, 3, 4, 5];
+
+                let squaredNumbers = numbers1.map(number1 => number1 ** 2);
+
+                console.log(squaredNumbers); // Output: [1, 4, 9, 16, 25]
+
+
+    </script>
+
+
+        <h3>
+            Using map() with Objects:
+            You can use map() with objects as well.  <br>
+            Here's an example of transforming an array of objects:
+        </h3>
+
+        <script>
+            // Example 3: Transforming an array of objects
+                let students = [
+                { name: 'Alice', age: 22 },
+                { name: 'Bob', age: 25 },
+                { name: 'Charlie', age: 20 }
+                ];
+
+                let studentNames = students.map(student => student.name);
+
+                console.log(studentNames); // Output: ['Alice', 'Bob', 'Charlie']
+
+        </script>
+
+        <h3>
+            <b>Important Note:</b>
+            Remember that map() creates a new array without modifying the original one. <br>
+            If you want to modify the original array in place, <br>
+            you might want to use other array methods like forEach() or directly update the array <br>
+            elements within a loop.
+        </h3>
+
+</body>
+</html>

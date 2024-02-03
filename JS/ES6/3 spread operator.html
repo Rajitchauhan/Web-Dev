@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread operator</title>
+</head>
+<body>
+    <h3>
+        The spread operator (...) in JavaScript is a powerful and versatile feature that <br>
+        allows you to expand elements (arrays or objects) or combine <br>
+        them in a concise and expressive way. <br>
+        It is commonly used for array and object manipulation.
+    </h3>
+
+    <script>
+        let array1 = [1, 2, 3];
+        let array2 = [4, 5, 6];
+
+        // Combining arrays using the spread operator
+        let combinedArray = [...array1, ...array2];
+
+        console.log(combinedArray); // Output: [1, 2, 3, 4, 5, 6]
+
+    </script>
+
+    <script>
+        let object1 = { a: 1, b: 2 };
+        let object2 = { b: 3, c: 4 };
+
+        // Merging objects using the spread operator
+        let mergedObject = { ...object1, ...object2 };
+
+        console.log(mergedObject); // Output: { a: 1, b: 3, c: 4 }
+
+    </script>
+</body>
+</html>

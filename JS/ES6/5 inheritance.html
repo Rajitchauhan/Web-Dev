@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritence</title>
+</head>
+<body>
+    <h3>
+        Classes support inheritance, <br>
+        allowing you to create a new class that inherits properties and methods 
+        <br> from an existing class. Here's an example:
+    </h3>
+    <script>
+            // Define a class named "Person"
+            class Person {
+            // Constructor method to initialize object properties
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+
+            // Method to display information about the person
+            displayInfo() {
+                console.log(`Name: ${this.name}, Age: ${this.age}`);
+            }
+            }
+
+            // Create an instance of the Person class
+            let john = new Person("John Doe", 25);
+
+            // Call the method on the instance
+            john.displayInfo(); // Output: Name: John Doe, Age: 25
+
+
+            // Define a subclass "Student" that extends "Person"
+                class Student extends Person {
+                constructor(name, age, grade) {
+                    // Call the constructor of the parent class using super()
+                    super(name, age);
+                    this.grade = grade;
+                }
+
+                // Override the displayInfo method
+                displayInfo() {
+                    console.log(`Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}`);
+                }
+
+                // Additional method specific to the Student class
+                study() {
+                    console.log(`${this.name} is studying.`);
+                }
+                }
+
+                // Create an instance of the Student class
+                let alice = new Student("Alice", 20, "A");
+
+                // Call methods on the instance
+                alice.displayInfo(); // Output: Name: Alice, Age: 20, Grade: A
+                alice.study();       // Output: Alice is studying.
+
+
+
+    </script>
+</body>
+</html>

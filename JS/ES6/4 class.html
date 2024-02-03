@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class in js</title>
+</head>
+<body>
+   <h3>
+    In JavaScript, the class keyword is used to define a class, <br>
+    <br>
+     which is a blueprint for creating objects. <br>
+      Classes provide a way to create and organize objects with shared properties and methods.
+      <br>
+       Class-based syntax was introduced in ECMAScript 2015 (ES6) and has since become a standard part <br>
+        of modern JavaScript.
+   </h3> 
+
+   <script>
+        class Person{
+            constructor(name , age){
+                this.name = name;
+                this.age = age;
+            }
+            showName(){
+                console.log(`name is :: ${this.name} and his age is ${this.age}`);
+            }
+        }
+
+        let P = new Person('Rajit' , 22);
+        P.showName();
+   </script>
+
+</body>
+</html>
